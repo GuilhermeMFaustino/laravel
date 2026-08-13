@@ -7,7 +7,15 @@ use Illuminate\Support\Facades\Route;
     return 'hello word';
 });*/
 
-Route::redirect('rota-a', 'rota-b');
+// Route::redirect('rota-a', 'rota-b', 301);
+
+Route::view('/welcome', 'welcome');
+
+Route::get('/', function(){
+    return View('welcome');
+});
+
+
 
 Route::get('rota-b', function(){
     return 'Rota B';
