@@ -1,15 +1,14 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::domain('{guilherme}./')->group(function(){
-    Route::get('', function(){
-        return 'Hello Word';
-    });
-});
+Route::get('/', function(Request $request) {
 
-Route::fallback(function(){
-    return 'hello Word';
+    dd($request);
+    return $request;
+
+        //return view('Hello Word');
 });
 
 
