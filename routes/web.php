@@ -8,6 +8,10 @@ Route::domain('{guilherme}./')->group(function(){
     });
 });
 
+Route::fallback(function(){
+    return 'hello Word';
+});
+
 
 
 
