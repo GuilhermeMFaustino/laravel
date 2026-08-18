@@ -1,12 +1,18 @@
 <?php
 
-use App\Models\User;
+
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user/{user}', function (User $user) {
+Route::get('/', function () {
 
-    dd($user);
+    return View('welcome');
 });
+
+Route::get('users', function(){
+    dd('x');
+})->middleware('userAgent');
+
+
 
 
 
