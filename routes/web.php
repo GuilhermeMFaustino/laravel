@@ -8,9 +8,21 @@ Route::get('/', function () {
     return View('welcome');
 });
 
-Route::get('users', function(){
-    dd('x');
-})->middleware('userAgent');
+/*Route::middleware(['userAgent', 'CheckToken'])->group(function () {
+    Route::get('users', function () {
+
+        dd('users');
+    });
+
+    Route::get('posts', function () {
+
+        dd('posts');
+    });
+});*/
+
+Route::get('admin', function(){
+    dd('admin');
+})->middleware('CheckToken');
 
 
 
