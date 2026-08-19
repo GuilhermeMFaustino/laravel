@@ -14,8 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
-            'userAgent' => UserAgent::class,
             'CheckToken' => CheckToken::class,
+            //'userAgent' => UserAgent::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
