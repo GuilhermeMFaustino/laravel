@@ -11,4 +11,9 @@ class UserController extends Controller
         dd('index');
     }
 
+    public function show()
+    {
+        dd('show');
+    }
+
 }
