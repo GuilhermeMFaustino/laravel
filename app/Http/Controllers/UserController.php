@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,10 +12,12 @@ class UserController extends Controller
         dd('index');
     }
 
-    public function show(Request $request, $id)
+    public function show(Request $request, User $user)
     {
-        dd($request);
-        dd('show', $id);
+        // dd($request);
+        // dd('show', $id);
+        return $user;
+        dd($user);
     }
 
 }
