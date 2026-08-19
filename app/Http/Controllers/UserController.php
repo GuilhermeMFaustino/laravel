@@ -11,9 +11,10 @@ class UserController extends Controller
         dd('index');
     }
 
-    public function show()
+    public function show(Request $request, $id)
     {
-        dd('show');
+        dd($request);
+        dd('show', $id);
     }
 
 }
