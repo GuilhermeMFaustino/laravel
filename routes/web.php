@@ -1,13 +1,22 @@
 <?php
 
-use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\UserController;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/users', [UserController::class, 'index'])->middleware('CheckToken');
-Route::get('/users/{user}', [UserController::class, 'show']);
+Route::get('user', function(Request $request) {
 
+    // dd($request);
 
+    //dd($request->path());
 
-Route::get('/checkout', CheckoutController::class);
+    //dd($request->url());
+    dd($request->fullUrl());
+    // dd($request->fullUrlWithQuery());
+    // dd($request->fullUrlIs());
+    // dd($request->is('users'));
+    // dd($request->routeIs('users'));
+    // dd($request->method());
+    // dd($request->isMethod('get'));
 
+});
