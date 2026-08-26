@@ -7,5 +7,6 @@
 </head>
 <body>
 usuarios
+<?= $user ?>
 </body>
 </html>
