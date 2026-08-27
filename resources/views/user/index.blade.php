@@ -7,7 +7,8 @@
 </head>
 <body>
 usuarios
-<?= $user ?>
-<?= $userAdmin ?>
+<?php foreach($user as $use){
+    echo $use->name . "<br>";
+} ?>
 </body>
 </html>
