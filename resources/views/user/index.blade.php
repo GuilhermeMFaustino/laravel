@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
 </head>
+
 <body>
-usuarios
-<?php foreach($user as $use){
-    echo $use->name . "<br>";
-} ?>
+    usuarios
+    {{ count($users) }}
+
+    @if (count($users) === 1)
+        Eu tenho 1 usuario
+    @elseif (count($users) > 1)
+        Eu tenho varios users
+    @else
+        eu nao tenho usuarios
+    @endif
 </body>
+
 </html>
