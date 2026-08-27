@@ -8,5 +8,6 @@
 <body>
 usuarios
 <?= $user ?>
+<?= $userAdmin ?>
 </body>
 </html>
