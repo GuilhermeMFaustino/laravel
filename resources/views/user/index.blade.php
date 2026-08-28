@@ -9,15 +9,20 @@
 
 <body>
     usuarios
-    {{ count($users) }}
+    {{ count($user) }}
 
-    @if (count($users) === 1)
+    @foreach ($user as $users )
+    {{ dd($loop) }}
+    {{ $users->id }}
+    @endforeach
+
+   {{-- @if (count($users) === 1)
         Eu tenho 1 usuario
     @elseif (count($users) > 1)
         Eu tenho varios users
     @else
         eu nao tenho usuarios
-    @endif
+    @endif --}}
 </body>
 
 </html>
