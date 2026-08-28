@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+    @include('user/heading');
     usuarios
     {{ count($user) }}
 
