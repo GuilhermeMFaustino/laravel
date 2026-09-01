@@ -12,6 +12,6 @@
      conteudo padrao
     @show
 
-    @yield('yield', 'Conteudo padrao do yield')
+   
 </body>
 </html>
