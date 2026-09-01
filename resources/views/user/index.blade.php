@@ -5,5 +5,6 @@
 @section('title', 'Lista de usuario')
 
 @section('content')
-    @each('user.user', $users, 'user')
+    <x-users></x-users>
+    {{-- @each('user.heading', $users, 'users') --}}
 @endsection
